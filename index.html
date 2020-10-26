@@ -1,57 +1,26 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Weather Dashboard</title>
-</head>
-<body>
-    <header class="jumbotron">
-        <h1 class="display-3">Weather Dashboard</h1>
-    </header>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 form-group">
-                <label for="search">Enter a City:</label>
-                <input type="text" class="form-control" id="search-input">
-                <button type="submit" class="btn btn-primary" id="run-search">
-                <i class="fa fa-search"></i>Search</button>
-                <button type="submit" class="btn btn-secondary" id="clear-search">
-                    Clear Searches</button>
-            </div>
-
-
-        </div>
-
-    </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
-    <script type="text/javascript" src="moment.js"></script>
-</body>
-</html> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Weather Dashboard</title>
 </head>
 <body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <i class="material-icons">WeatherNow!</i>&nbsp;Weather right where you are!</a>
+    </nav>
     <header class="jumbotron">
-        <h1 class="display-3">Weather Dashboard</h1>
+        <h1 class="display-3">WeatherNow Dashboard</h1>
     </header>
 
     <div class="container">
         <div class="row">
-            <div class="col-md-3 form-group">
+            <aside class="col-lg-3 bg-light">
+            <div class="form-group">
                 <label for="search">Enter a City:</label>
                 <input type="text" class="form-control" id="search-input">
                 <button type="submit" class="btn btn-primary" id="run-search">
@@ -62,15 +31,77 @@
             <ul class="history">
 
             </ul>
-
+            </aside>
+            <div class="col-lg-9">
+                <div id="today" class="mt-3"></div>
+                <div id="forecast" class="mt-3"></div>
+              </div>
         </div>
-        <div class="col-lg-9">
-            <div id="today" class="mt-3"></div>
-            <div id="forecast" class="mt-3"></div>
-          </div>
-    </div>
+         
+        </div>
+
+     
+          <div class="col-md-9">
+            <div class="container" id="earthforecast">
+                <!--Weather for current location-->
+            </div>
+        </div>
+
+        <!-- <div style="float: right" class = "container-1">
+        <div id="forecast-weather" class="col-lg-9">
+            <h4>5-Day Forecast:</h4>
+            <div id="forecast-cards">
+                <div class="card forecast">
+                    <div id="forecast1" class="card-body">
+                        <span class="card-title" id="forecast-date1">
+                        </span>
+                        <span id="forcast"></span>
+                        <p class="card-text" id="forecast-temp1"></p>
+                        <p class="card-text" id="forecast-humidity1"></p>
+                    </div>
+                </div>
+                <div class="card forecast">
+                    <div id="forecast2" class="card-body">
+                        <span class="card-title" id="forecast-date2">
+                        </span>
+                        <span id = "forecast-icon2"></span>
+                        <p class="card-text" id="forecast-temp2"></p>
+                        <p class="card-text" id="forecast-humidity2"></p>
+                    </div>
+                </div>
+                <div class="card forecast">
+                    <div id="forecast3" class="card-body">
+                        <span class="card-title" id="forecast-date3">
+                        </span>
+                        <span id="forecast-icon3"></span>
+                        <p class="card-text" id="forecast-temp3"></p>
+                        <p class="card-text" id="forecast-humidity3"></p>
+                    </div>
+                </div>
+                <div class="card forecast">
+                    <div id="forecast4" class="card-body">
+                        <span class="card-title" id="forecast-date4">
+                        </span>
+                        <span id="forecast-icon4"></span>
+                        <p class="card-text" id="forecast-temp4"></p>
+                        <p class="card-text" id="forecast-humidity4"></p>
+                    </div>
+                </div>
+                <div class="card forecast">
+                    <div id="forecast5" class="card-body">
+                        <span class="card-title" id="forecast-date5">
+                        </span>
+                        <span id = "forecast-icon5"></span>
+                        <p class="card-text" id="forecast-temp5"></p>
+                        <p class="card-text" id="forecast-humidity5"></p>
+                    </div> 
+                            </div>
+                            </div>
+                        </div>
+                    </div> -->
+             
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="script1.js"></script>
     <script type="text/javascript" src="moment.js"></script>
 </body>
 </html>
