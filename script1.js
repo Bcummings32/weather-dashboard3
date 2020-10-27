@@ -28,7 +28,7 @@ $(document).ready(function(){
     
     function getWeather(city) {
     let APIKey = "63dbd153e65dc57a0e639b1071efe861";
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey + "&units=imperial";
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey + "&units=imperial";
     //make css class margin left
     $.ajax({
         url: queryURL,
@@ -62,7 +62,7 @@ $(document).ready(function(){
     
             function getFiveDayForecast(city) {
                 let APIKey = "63dbd153e65dc57a0e639b1071efe861";
-                let queryUrl = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey + "&units=imperial";
+                let queryUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey + "&units=imperial";
                 $.ajax({
     
                 method: "GET",
